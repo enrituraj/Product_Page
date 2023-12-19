@@ -88,7 +88,7 @@ function Load__Product(data){
                 <h3 class="product__price"><i class='bx bx-rupee'></i> ${product.price}</h3>
                 <div class="product__btn">
                     <button class="btn btn__add__to__cart" onclick="add_to_cart(${product.id})"><i class='bx bxs-cart-add'></i></button>
-                    <a  href="/product.html?product_id=${product.id}" class="btn btn__view__product">View Product</a>
+                    <a  href="product.html?product_id=${product.id}" class="btn btn__view__product">View Product</a>
                 </div>
             </div>
     `;

@@ -160,6 +160,8 @@ a {
     img {
         position: absolute;
         inset: 0;
+        height: 100%;
+        object-position: left;
         object-fit: cover;
     }
 }
@@ -210,8 +212,8 @@ a {
         }
 
         .products__row {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
             gap: 1rem;
 
             .product__card {
@@ -219,9 +221,6 @@ a {
                 background-color: var(--light__clr);
                 padding: 2rem;
                 margin-bottom: 1rem;
-                flex-basis: 20%;
-                flex-grow: 1;
-                min-width: 350px;
 
                 img {
                     width: 100%;
@@ -512,6 +511,29 @@ a {
 }
 
 @media screen and (max-width:768px) {
+    .hero__showcase {
+        margin-inline: 0;
+    }
+
+    .header {
+        .navbar {
+            padding: 8px 16px;
+
+            .navbar__logo h2 {
+                font-size: 14px;
+
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            .btn__cart {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    }
+
     .products__page {
         margin-inline: 0;
 
