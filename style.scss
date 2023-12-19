@@ -21,8 +21,11 @@
     box-sizing: border-box;
 }
 
-body {
+html{
     position: relative;
+}
+
+body {
     min-height: 100vh;
     background-color: var(--extra__light__brand__clr);
     font-family: 'Poppins', sans-serif;
@@ -563,5 +566,21 @@ a {
     .cart__page {
         margin-inline: 0;
         grid-template-columns: 1fr;
+        .product_details .product__name {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .input_group{
+            input{
+                padding: 12px;
+            }
+            button{
+                padding: 8px;
+            }
+        }
+    }
+
+    .footer_group{
+        flex-direction: column;
     }
 }
