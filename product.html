@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="loader active" >
+    <div id="loder"></div>
+</div>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <h2>Sh<span>o</span>pping</h2>
+                    </a>
+                </div><a href="cart.html" class="btn__cart">
+                    <i class='bx bx-cart-alt'></i> 
+                    <span> View Cart </span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="products__page">
+        <div class="container">
+            <div class="product__showcase">
+                <div class="product_image">
+                    <img src="" alt="" id="product_img">
+                </div>
+                <div class="product__details">
+                    <h2 id="title"></h2>
+
+                    <p id="description"></p>
+                    <h3 id="price"><i class='bx bx-rupee'></i> </h3>
+
+                    <p id="category"></p>
+                    <h4 id="rating">Rating : </h4>
+                    <h5 id="total_item">Total Item : </h5>
+
+                    <button id="add_cart_btn" class="btn__add__to__cart">
+                        <i class='bx bxs-cart-add'></i> Add to Cart
+                    </button>
+
+                </div>                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_group">
+                <p>Version : 1.0.0</p>
+                <p>Made by <span>❤</span> Ritu Raj</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('product_id');
+
+        const cart_btn = document.getElementById('add_cart_btn');
+        cart_btn.setAttribute('onclick',`add_to_cart(${productId})`)
+        
+        if (productId) {
+            viewProductDetails(productId);
+        }        
+    </script>
+</body>
+</html>

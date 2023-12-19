@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="loader active" >
+        <div id="loder"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <h2>Sh<span>o</span>pping</h2>
+                    </a>
+                </div>
+                <a href="cart.html" class="btn__cart">
+                    <i class='bx bx-cart-alt'></i> 
+                    <span> View Cart </span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section class="hero__showcase">
+            <img src="https://static.vecteezy.com/system/resources/previews/004/299/835/non_2x/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg" alt="">
+        </section>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <section class="products">
+                <div class="products__title">
+                    <h2>Our <span>P</span>roduct</h2>
+                </div>
+                <div class="products__row" id="products__row">
+
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_group">
+                <p>Version : 1.0.0</p>
+                <p>Made by <span>❤</span> Ritu Raj</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+    <script>
+        Show__Product()
+    </script>
+</body>
+</html>

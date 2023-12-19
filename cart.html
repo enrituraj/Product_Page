@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body><div class="loader active" >
+    <div id="loder"></div>
+</div>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <h2>Sh<span>o</span>pping</h2>
+                    </a>
+                </div><a href="cart.html" class="btn__cart">
+                    <i class='bx bx-cart-alt'></i> 
+                    <span> View Cart </span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">        
+        <div class="cart__page">
+            <div class="cart_item" id="cart_item">
+                
+            </div>
+            <div class="cart_detail">
+                <div class="cart__detail__header">
+                    <h2>Price Details</h2>
+                </div>
+                <div class="cart__detail__body">
+                    <div class="items">
+                        <div class="item__detail">Price (<span id="total_product"></span> items)</div>
+                        <div class="item__detail" id="total_price">₹00</div>
+                    </div>
+                    <div class="items">
+                        <div class="item__detail">Discount</div>
+                        <div class="item__detail" id="discount">− ₹00</div>
+                    </div>
+                    <div class="items">
+                        <div class="item__detail">Delivery Charges</div>
+                        <div class="item__detail">Free</div>
+                    </div>
+                    <div class="items">
+                        <div class="item__detail">Total Amount</div>
+                        <div class="item__detail" id="total_amount">₹00</div>
+                    </div>
+                </div>
+                <div class="cart__details__footer">
+                    <div class="form_group">
+                        <label for="cupon">Cupon</label>
+                        <input type="text" name="" placeholder="Enter cupon code" id="">
+                        <button>Submit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_group">
+                <p>Version : 1.0.0</p>
+                <p>Made by <span>❤</span> Ritu Raj</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+
+    <script>
+        let cart_item = document.getElementById("cart_item");
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        Show_Cart_Product(cart)
+    </script>
+
+</body>
+</html>
